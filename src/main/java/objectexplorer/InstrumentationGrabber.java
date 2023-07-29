@@ -13,6 +13,7 @@ public class InstrumentationGrabber {
 
     public static void premain(String agentArgs, Instrumentation inst) {
         if (InstrumentationGrabber.instrumentation != null) throw new AssertionError("Already initialized");
+        System.out.println("Initialized Mem Measurer");
         InstrumentationGrabber.instrumentation = inst;
     }
 
